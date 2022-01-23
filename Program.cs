@@ -7,7 +7,7 @@ namespace Spi;
 
 internal class Program
 {
-    static void enumdir_p(string startPath)
+    static void EnumdirP(string startPath)
     {
         var paths = System.Threading.Channels.Channel.CreateUnbounded<string>();
 
@@ -49,6 +49,11 @@ internal class Program
     }
     static void Main(string[] args)
     {
-        enumdir_p(".");
+        string path = args.Length switch
+        {
+            0 => ".",
+            _ => args[0]
+        };
+        enumdir_p(path);
     }
 }
