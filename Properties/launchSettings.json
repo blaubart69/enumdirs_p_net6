@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "findpNet": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\users\\bee"
+    }
+  }
+}
